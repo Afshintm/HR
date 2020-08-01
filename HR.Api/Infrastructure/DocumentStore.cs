@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using HR.Api.Models;
 
 namespace HR.Api.Infrastructure
@@ -16,16 +18,18 @@ namespace HR.Api.Infrastructure
         {
             Persons = new List<Person>
             {
-                new Person(){""}
-                
+                Person.CreateNew("Afshin","Teymoori",Gender.Male,new DateTime(1973,11,23)),
+                Person.CreateNew("Kayvan","Teymoori",Gender.Male,new DateTime(1975,2,22)),
+                Person.CreateNew("Iman","Teymoori",Gender.Male,new DateTime(1984,4,28)),
             };
             
             Employees = new List<Employee>
             {
-                new Employee()
+                new Employee
                 {
-                    EmploymentType = EmploymentType.FullTime;
-                        
+                    EmploymentType = EmploymentType.FullTime,
+                    Person = Persons.FirstOrDefault(x=>x.FirstName =="Afshin"),
+                    StartDate = new DateTime(2020,8,1)
                 }
             };
         }
