@@ -4,7 +4,7 @@ namespace HR.Api.Models
 {
     public interface IEntity
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; }
         DateTime DateCreated { get; }
         bool IsDeleted { get; }
     }
@@ -13,7 +13,7 @@ namespace HR.Api.Models
     {
         public DateTime DateCreated { get; }
         public bool IsDeleted { get; }
-        public Guid Id { get; set; }
+        public Guid Id { get; protected set; }
 
         protected Entity()
         {

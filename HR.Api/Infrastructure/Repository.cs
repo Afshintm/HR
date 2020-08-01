@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using HR.Api.Core;
+using HR.Api.Domain.Seed;
 
 namespace HR.Api.Infrastructure
 {

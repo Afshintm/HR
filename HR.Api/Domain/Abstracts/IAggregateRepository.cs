@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using HR.Api.Core;
+using HR.Api.Domain.Seed;
 
-namespace HR.Api.Infrastructure
+namespace HR.Api.Domain.Abstracts
 {
     public interface IAggregateRepository<T> : IEntityRepository<T>
         where T : AggregateRoot

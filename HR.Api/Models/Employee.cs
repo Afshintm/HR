@@ -1,4 +1,5 @@
 using System;
+using HR.Api.Domain.Seed;
 
 namespace HR.Api.Models
 {
@@ -14,7 +15,7 @@ namespace HR.Api.Models
         DateTime EndDate { get; set; }
     }
 
-    public class Employee: Entity,IEmployed
+    public class Employee: AggregateRoot,IEmployed
     {
         public Person Person;
         public DateTime StartDate { get; set; }

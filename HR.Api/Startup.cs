@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using HR.Api.Domain.Abstracts;
 using HR.Api.Infrastructure;
 using MediatR;
 using Microsoft.AspNetCore.Builder;

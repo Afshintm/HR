@@ -1,12 +1,9 @@
-using System;
-using HR.Api.ViewModels;
+using HR.Api.Domain.Seed;
 using MediatR;
 
 namespace HR.Api.Queries
 {
-    public class GetEmployeeDetailsQuery: IRequest<EmployeeViewModel>
+    public class GetEmployeeDetailsQuery: BaseEntityRequest,IRequest<AggregateRoot>
     {
-        public Guid Id { get; set; }
-
     }
 }

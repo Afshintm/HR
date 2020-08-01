@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using HR.Api.Domain.Seed;
 using MediatR;
 
 namespace HR.Api.Core
